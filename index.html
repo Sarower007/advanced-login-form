@@ -569,7 +569,7 @@ function renderSummary(){
   const c=cur().config, pass=+c.pass, sts=cur().students;
   let present=0,passed=0,failed=0,absent=0;
   sts.forEach(st=>{ if(st.absent){absent++;return;} if(!rowHasEntry(st))return; present++; rowTotal(st)>=pass?passed++:failed++; });
-  $('s_total').textContent=toBn(sts.length); $('s_present').textContent=toBn(present);
+  $('s_total').textContent=toBn(sts.length);
   $('s_pass').textContent=toBn(passed); $('s_fail').textContent=toBn(failed); $('s_absent').textContent=toBn(absent);
 }
 
