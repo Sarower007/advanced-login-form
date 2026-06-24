@@ -3,162 +3,132 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ব্যবহারিক পরীক্ষার নম্বরপত্র — ময়মনসিংহ জিলা স্কুল</title>
+<title>ব্যবহারিক / ধারাবাহিক মূল্যায়ন নম্বরপত্র — ময়মনসিংহ জিলা স্কুল</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bn-font: 'Hind Siliguri','Noto Sans Bengali','Nirmala UI','Vrinda',sans-serif;
-  --primary:#0f5132;
-  --primary-2:#157347;
-  --accent:#198754;
-  --bg:#eef2f0;
-  --card:#ffffff;
-  --line:#d7dedb;
-  --muted:#5f6b66;
-  --pass:#0f7b3f;
-  --fail:#c0392b;
-  --shadow:0 6px 22px rgba(15,81,50,.10);
+  --bn-font:'Hind Siliguri','Noto Sans Bengali','Nirmala UI','Vrinda',sans-serif;
+  --primary:#0f5132;--primary-2:#157347;--accent:#198754;
+  --bg:#eef2f0;--card:#fff;--line:#d7dedb;--muted:#5f6b66;
+  --pass:#0f7b3f;--fail:#c0392b;--shadow:0 6px 22px rgba(15,81,50,.10);
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
-body{
-  font-family:var(--bn-font);
-  background:var(--bg);
-  color:#1d2622;
-  line-height:1.55;
-  -webkit-font-smoothing:antialiased;
-}
+body{font-family:var(--bn-font);background:var(--bg);color:#1d2622;line-height:1.55;-webkit-font-smoothing:antialiased}
 button,input,select,textarea{font-family:inherit;font-size:1rem}
 
-/* ---------- App chrome (screen only) ---------- */
-.app-header{
-  background:linear-gradient(120deg,var(--primary),var(--primary-2));
-  color:#fff;padding:18px 20px;box-shadow:var(--shadow);
-}
-.app-header .wrap{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-.app-header h1{font-size:1.35rem;margin:0;font-weight:700}
-.app-header p{margin:2px 0 0;opacity:.9;font-size:.92rem}
-.app-header .badge{margin-left:auto;background:rgba(255,255,255,.15);padding:7px 14px;border-radius:30px;font-size:.85rem}
+.app-header{background:linear-gradient(120deg,var(--primary),var(--primary-2));color:#fff;padding:16px 18px;box-shadow:var(--shadow)}
+.app-header .wrap{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.app-header h1{font-size:1.25rem;margin:0;font-weight:700}
+.app-header p{margin:2px 0 0;opacity:.9;font-size:.88rem}
+.app-header .badge{margin-left:auto;background:rgba(255,255,255,.15);padding:6px 13px;border-radius:30px;font-size:.82rem}
 
-.container{max-width:1180px;margin:0 auto;padding:18px 16px 60px}
-
-.card{
-  background:var(--card);border:1px solid var(--line);border-radius:14px;
-  padding:18px;margin-bottom:18px;box-shadow:var(--shadow);
-}
-.card h2{margin:0 0 14px;font-size:1.05rem;color:var(--primary);display:flex;align-items:center;gap:8px}
-.card h2 .ic{width:24px;height:24px;background:var(--primary);color:#fff;border-radius:7px;display:grid;place-items:center;font-size:.85rem}
+.container{max-width:1180px;margin:0 auto;padding:16px 14px 60px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:16px;box-shadow:var(--shadow)}
+.card h2{margin:0 0 14px;font-size:1.02rem;color:var(--primary);display:flex;align-items:center;gap:8px}
+.card h2 .ic{width:24px;height:24px;background:var(--primary);color:#fff;border-radius:7px;display:grid;place-items:center;font-size:.85rem;flex:0 0 auto}
 
 .grid{display:grid;gap:12px}
-.grid.cols-3{grid-template-columns:repeat(3,1fr)}
-.grid.cols-4{grid-template-columns:repeat(4,1fr)}
-@media(max-width:820px){.grid.cols-3,.grid.cols-4{grid-template-columns:1fr 1fr}}
-@media(max-width:520px){.grid.cols-3,.grid.cols-4{grid-template-columns:1fr}}
+.cols-3{grid-template-columns:repeat(3,1fr)}
+@media(max-width:820px){.cols-3{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.cols-3{grid-template-columns:1fr}}
 
-.field{display:flex;flex-direction:column;gap:5px}
+.field{display:flex;flex-direction:column;gap:5px;min-width:0}
 .field label{font-size:.84rem;color:var(--muted);font-weight:600}
-.field input,.field select{
-  padding:9px 11px;border:1px solid var(--line);border-radius:9px;background:#fbfdfc;transition:.15s;
-}
+.field input,.field select{padding:9px 11px;border:1px solid var(--line);border-radius:9px;background:#fbfdfc;transition:.15s;width:100%}
 .field input:focus,.field select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(25,135,84,.15);background:#fff}
 
 .toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 .toolbar .spacer{flex:1}
 
-.btn{
-  border:none;border-radius:9px;padding:10px 16px;font-weight:600;cursor:pointer;
-  display:inline-flex;align-items:center;gap:7px;transition:.15s;font-size:.92rem;
-}
+.btn{border:none;border-radius:9px;padding:10px 16px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:7px;transition:.15s;font-size:.92rem}
 .btn:active{transform:translateY(1px)}
-.btn-primary{background:var(--primary);color:#fff}
-.btn-primary:hover{background:var(--primary-2)}
-.btn-accent{background:var(--accent);color:#fff}
-.btn-accent:hover{background:#15794a}
-.btn-ghost{background:#eef3f1;color:var(--primary);border:1px solid var(--line)}
-.btn-ghost:hover{background:#e2eae6}
-.btn-danger{background:#fdecea;color:var(--fail);border:1px solid #f3c2bc}
-.btn-danger:hover{background:#fadbd7}
+.btn-primary{background:var(--primary);color:#fff}.btn-primary:hover{background:var(--primary-2)}
+.btn-accent{background:var(--accent);color:#fff}.btn-accent:hover{background:#15794a}
+.btn-ghost{background:#eef3f1;color:var(--primary);border:1px solid var(--line)}.btn-ghost:hover{background:#e2eae6}
+.btn-danger{background:#fdecea;color:var(--fail);border:1px solid #f3c2bc}.btn-danger:hover{background:#fadbd7}
 .btn-print{background:#0d3d24;color:#fff;font-size:1rem;padding:11px 22px}
+.btn-sm{padding:6px 12px;font-size:.85rem}
 
-select.sheet-select{min-width:230px;padding:9px 11px;border:1px solid var(--line);border-radius:9px;background:#fbfdfc}
-
+select.sheet-select{min-width:200px;max-width:100%;padding:9px 11px;border:1px solid var(--line);border-radius:9px;background:#fbfdfc}
 .hint{font-size:.82rem;color:var(--muted);margin-top:8px}
 
-/* ---------- Table ---------- */
-.table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px}
-table.marks{border-collapse:collapse;width:100%;min-width:760px;background:#fff}
-table.marks th,table.marks td{border:1px solid var(--line);padding:6px 8px;text-align:center}
-table.marks thead th{background:#eaf3ee;color:var(--primary);font-weight:600;font-size:.9rem;position:sticky;top:0}
+.comp-row{display:flex;gap:10px;align-items:flex-end;margin-bottom:10px;flex-wrap:wrap;background:#f7faf8;border:1px solid var(--line);border-radius:10px;padding:10px}
+.comp-row .field{flex:1;min-width:140px}
+.comp-row .small{flex:0 0 120px}
+.preset-bar{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 14px}
+
+/* table */
+.table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;-webkit-overflow-scrolling:touch}
+table.marks{border-collapse:collapse;width:100%;background:#fff;min-width:520px}
+table.marks th,table.marks td{border:1px solid var(--line);padding:7px 8px;text-align:center;vertical-align:middle}
+table.marks thead th{background:#eaf3ee;color:var(--primary);font-weight:600;font-size:.9rem;line-height:1.25}
+table.marks thead th small{font-weight:500;color:var(--muted)}
 table.marks tbody tr:nth-child(even){background:#fafdfb}
-table.marks td input{
-  width:100%;border:1px solid transparent;background:transparent;text-align:center;padding:6px 4px;border-radius:6px;
-}
+table.marks td input{width:100%;max-width:90px;border:1px solid transparent;background:transparent;text-align:center;padding:6px 4px;border-radius:6px;font-size:.95rem}
 table.marks td input:focus{outline:none;border-color:var(--accent);background:#fff;box-shadow:0 0 0 2px rgba(25,135,84,.12)}
-table.marks td.name input{text-align:right}
-table.marks td input.invalid{border-color:var(--fail);background:#fdecea}
-.col-sl{width:46px}
-.col-roll{width:88px}
-.col-mark{width:92px}
-.col-total{width:80px;font-weight:700}
-.col-res{width:108px}
-.col-grade{width:64px}
-.col-act{width:48px}
+.col-roll{width:100px}.col-total{width:84px;font-weight:700}.col-res{width:110px}.col-grade{width:64px}.col-act{width:54px}
 .print-val{display:none}
 
-.res-badge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:.82rem;font-weight:600}
-.res-pass{background:#e3f5ea;color:var(--pass)}
-.res-fail{background:#fdecea;color:var(--fail)}
-.res-absent{background:#eef0ef;color:#7a857f}
-.grade-cell{font-weight:700}
+/* attendance cell */
+.att-cell{display:flex;flex-direction:column;align-items:center;gap:3px}
+.att-cell input{max-width:70px}
+.att-cell .att-mark{font-size:.78rem;color:var(--primary);font-weight:700;background:#e3f5ea;border-radius:20px;padding:1px 9px;white-space:nowrap}
 
+.res-badge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:.82rem;font-weight:600}
+.res-pass{background:#e3f5ea;color:var(--pass)}.res-fail{background:#fdecea;color:var(--fail)}.res-absent{background:#eef0ef;color:#7a857f}
+.grade-cell{font-weight:700}
 .row-del{background:#fdecea;color:var(--fail);border:none;border-radius:6px;width:28px;height:28px;cursor:pointer;font-size:1rem;line-height:1}
 .row-del:hover{background:#fadbd7}
 .absent-chk{transform:scale(1.15);cursor:pointer}
 
-.summary-strip{display:flex;gap:18px;flex-wrap:wrap;margin-top:14px}
-.summary-strip .pill{background:#eef3f1;border:1px solid var(--line);border-radius:10px;padding:8px 14px;font-size:.9rem}
-.summary-strip .pill b{color:var(--primary);font-size:1.05rem}
+.summary-strip{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+.summary-strip .pill{background:#eef3f1;border:1px solid var(--line);border-radius:10px;padding:7px 13px;font-size:.88rem}
+.summary-strip .pill b{color:var(--primary);font-size:1.02rem}
 
-/* ---------- Printable sheet ---------- */
-#printArea{background:#fff}
+/* printable */
 .sheet-paper{max-width:900px;margin:0 auto}
 .sheet-head{text-align:center;border-bottom:2px solid #1d2622;padding-bottom:8px;margin-bottom:10px}
-.sheet-head .school{font-size:1.55rem;font-weight:700;letter-spacing:.3px}
+.sheet-head .school{font-size:1.5rem;font-weight:700;letter-spacing:.3px}
 .sheet-head .addr{font-size:.92rem;color:#333}
-.sheet-head .exam{font-size:1.12rem;font-weight:600;margin-top:4px;display:inline-block;border:1px solid #1d2622;border-radius:6px;padding:2px 14px}
-.sheet-meta{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 18px;font-size:.95rem;margin:8px 2px 12px}
+.sheet-head .exam{font-size:1.05rem;font-weight:600;margin-top:5px;display:inline-block;border:1px solid #1d2622;border-radius:6px;padding:2px 14px}
+.sheet-meta{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 18px;font-size:.94rem;margin:8px 2px 12px}
 .sheet-meta span b{font-weight:600}
-.sheet-foot{display:flex;justify-content:space-between;gap:30px;margin-top:46px;font-size:.95rem}
-.sign{text-align:center;flex:1}
+.sheet-foot{display:flex;justify-content:flex-end;margin-top:48px;font-size:.95rem}
+.sign{text-align:center;min-width:230px}
 .sign .line{border-top:1px solid #1d2622;margin-bottom:4px;padding-top:4px}
 
-.print-only{display:none}
-
-/* ---------- Print rules ---------- */
 @page{size:A4 portrait;margin:14mm 12mm}
 @media print{
   body{background:#fff;color:#000;font-size:12px}
   .no-print{display:none !important}
   .container{padding:0;max-width:100%}
   .card{box-shadow:none;border:none;padding:0;margin:0}
-  #printArea{padding:0}
   .table-scroll{overflow:visible;border:none;border-radius:0}
-  table.marks{min-width:0;width:100%}
+  table.marks{min-width:0}
   table.marks th,table.marks td{border:1px solid #000;padding:4px 5px;color:#000}
   table.marks thead{display:table-header-group}
   table.marks tbody tr:nth-child(even){background:#fff}
   table.marks tbody tr{page-break-inside:avoid}
-  table.marks td input{display:none}
-  .print-val{display:inline}
-  .col-act{display:none}
-  th.col-act{display:none}
+  table.marks td input,.att-cell .att-mark{display:none}
+  .att-cell{display:block}
+  .print-val{display:inline;font-weight:600}
+  .col-act,th.col-act{display:none}
   .res-badge{background:none !important;color:#000 !important;padding:0;font-weight:600}
-  .print-only{display:block}
   .summary-strip{border:1px solid #000;border-radius:0;padding:6px;margin-top:10px}
   .summary-strip .pill{background:none;border:none;padding:0 8px}
-  .sheet-foot{margin-top:60px}
+  .sheet-foot{margin-top:64px}
+}
+
+@media(max-width:560px){
+  .app-header h1{font-size:1.08rem}
+  .app-header .badge{margin-left:0}
+  .btn{padding:9px 13px;font-size:.88rem}
+  .sheet-head .school{font-size:1.2rem}
+  .sheet-meta{font-size:.85rem;gap:4px 12px}
+  table.marks th,table.marks td{padding:5px 5px;font-size:.85rem}
 }
 </style>
 </head>
@@ -167,7 +137,7 @@ table.marks td input.invalid{border-color:var(--fail);background:#fdecea}
 <header class="app-header no-print">
   <div class="wrap">
     <div>
-      <h1>ব্যবহারিক পরীক্ষার নম্বরপত্র</h1>
+      <h1>ব্যবহারিক / ধারাবাহিক মূল্যায়ন নম্বরপত্র</h1>
       <p>ময়মনসিংহ জিলা স্কুল — চারুকলা ও তথ্য ও যোগাযোগ প্রযুক্তি</p>
     </div>
     <div class="badge" id="autoSaveBadge">✓ স্বয়ংক্রিয়ভাবে সংরক্ষিত</div>
@@ -176,12 +146,11 @@ table.marks td input.invalid{border-color:var(--fail);background:#fdecea}
 
 <div class="container">
 
-  <!-- Sheet manager -->
   <div class="card no-print">
     <h2><span class="ic">▤</span> শীট ব্যবস্থাপনা</h2>
     <div class="toolbar">
-      <div class="field" style="flex-direction:row;align-items:center;gap:8px">
-        <label style="margin:0">চলমান শীট:</label>
+      <div class="field" style="flex-direction:row;align-items:center;gap:8px;min-width:0">
+        <label style="margin:0;flex:0 0 auto">চলমান শীট:</label>
         <select id="sheetSelect" class="sheet-select"></select>
       </div>
       <button class="btn btn-accent" id="newSheetBtn">＋ নতুন শীট</button>
@@ -191,12 +160,11 @@ table.marks td input.invalid{border-color:var(--fail);background:#fdecea}
       <button class="btn btn-ghost" id="restoreBtn">⬆ রিস্টোর</button>
       <input type="file" id="restoreFile" accept="application/json" style="display:none">
     </div>
-    <p class="hint">প্রতিটি শ্রেণি/শাখা/বিষয়ের জন্য আলাদা শীট তৈরি করুন। সব ডেটা এই ব্রাউজারে স্বয়ংক্রিয়ভাবে সংরক্ষিত থাকে — রিফ্রেশ দিলেও থাকবে। নিরাপত্তার জন্য মাঝে মাঝে “ব্যাকআপ” দিয়ে ফাইল নামিয়ে রাখুন।</p>
+    <p class="hint">প্রতিটি শ্রেণি/শাখা/বিষয়ের জন্য আলাদা শীট তৈরি করুন। সব ডেটা এই ব্রাউজারে স্বয়ংক্রিয়ভাবে সংরক্ষিত থাকে। নিরাপত্তার জন্য মাঝে মাঝে “ব্যাকআপ” নিন।</p>
   </div>
 
-  <!-- Configuration -->
   <div class="card no-print">
-    <h2><span class="ic">⚙</span> পরীক্ষার তথ্য ও সেটিংস</h2>
+    <h2><span class="ic">⚙</span> পরীক্ষার তথ্য</h2>
     <div class="grid cols-3">
       <div class="field"><label>প্রতিষ্ঠানের নাম</label><input id="cfg_school"></div>
       <div class="field"><label>ঠিকানা</label><input id="cfg_addr"></div>
@@ -208,33 +176,34 @@ table.marks td input.invalid{border-color:var(--fail);background:#fdecea}
         </select>
       </div>
       <div class="field"><label>শ্রেণি</label>
-        <select id="cfg_class">
-          <option>ষষ্ঠ</option><option>সপ্তম</option><option>অষ্টম</option>
-          <option>নবম</option><option>দশম</option>
-        </select>
+        <select id="cfg_class"><option>ষষ্ঠ</option><option>সপ্তম</option><option>অষ্টম</option><option>নবম</option><option>দশম</option></select>
       </div>
       <div class="field"><label>শাখা / শিফট</label>
-        <select id="cfg_section">
-          <option>ক</option><option>খ</option><option>গ</option>
-          <option>প্রভাতী</option><option>দিবা</option>
-        </select>
+        <select id="cfg_section"><option>ক</option><option>খ</option><option>গ</option><option>প্রভাতী</option><option>দিবা</option></select>
       </div>
       <div class="field"><label>সন</label><input id="cfg_year"></div>
       <div class="field"><label>শিক্ষকের নাম</label><input id="cfg_teacher"></div>
       <div class="field"><label>পদবি</label><input id="cfg_designation"></div>
     </div>
+  </div>
 
-    <h2 style="margin-top:18px"><span class="ic">∑</span> পূর্ণমান বণ্টন</h2>
-    <div class="grid cols-4">
-      <div class="field"><label>উপস্থিতি (পূর্ণমান)</label><input id="cfg_maxAtt" type="number" min="0"></div>
-      <div class="field"><label>ব্যবহারিক পরীক্ষা (পূর্ণমান)</label><input id="cfg_maxPrac" type="number" min="0"></div>
-      <div class="field"><label>ভাইভা (পূর্ণমান)</label><input id="cfg_maxViva" type="number" min="0"></div>
-      <div class="field"><label>পাস নম্বর</label><input id="cfg_pass" type="number" min="0"></div>
+  <div class="card no-print">
+    <h2><span class="ic">∑</span> নম্বর কাঠামো (এই শীটের জন্য)</h2>
+    <div class="preset-bar">
+      <button class="btn btn-ghost btn-sm" id="presetCharu">🎨 চারুকলা — ধারাবাহিক ৫০</button>
+      <button class="btn btn-ghost btn-sm" id="presetIct">💻 আইসিটি — উপস্থিতি ৫ + ব্যবহারিক ১০ + ভাইভা ১০</button>
+    </div>
+    <div id="compEditor"></div>
+    <div class="toolbar" style="margin-top:6px">
+      <button class="btn btn-ghost btn-sm" id="addCompBtn">＋ কম্পোনেন্ট যোগ</button>
+      <div class="field" style="flex-direction:row;align-items:center;gap:8px;margin-left:6px;min-width:0">
+        <label style="margin:0;flex:0 0 auto">পাস নম্বর:</label>
+        <input id="cfg_pass" type="number" min="0" style="width:90px">
+      </div>
     </div>
     <p class="hint" id="totalHint"></p>
   </div>
 
-  <!-- Roll generator -->
   <div class="card no-print">
     <h2><span class="ic">#</span> রোল নম্বর যোগ করুন</h2>
     <div class="toolbar">
@@ -245,10 +214,9 @@ table.marks td input.invalid{border-color:var(--fail);background:#fdecea}
       <button class="btn btn-ghost" id="addRowBtn">＋ একটি সারি</button>
       <button class="btn btn-danger" id="clearRowsBtn">সব সারি মুছুন</button>
     </div>
-    <p class="hint">রোল রেঞ্জ দিলে (যেমন ১ থেকে ৪০) স্বয়ংক্রিয়ভাবে প্রতিটি রোলের সারি তৈরি হবে। আগে যা ইনপুট দিয়েছেন তা মুছবে না।</p>
+    <p class="hint">রোল রেঞ্জ দিলে (যেমন ১ থেকে ৪০) স্বয়ংক্রিয়ভাবে প্রতিটি রোলের সারি তৈরি হবে। আগের ইনপুট মুছবে না।</p>
   </div>
 
-  <!-- Printable result sheet -->
   <div class="card">
     <div id="printArea">
       <div class="sheet-paper">
@@ -262,44 +230,26 @@ table.marks td input.invalid{border-color:var(--fail);background:#fdecea}
           <span><b>শ্রেণি:</b> <span id="p_class"></span></span>
           <span><b>শাখা:</b> <span id="p_section"></span></span>
           <span><b>পূর্ণমান:</b> <span id="p_full"></span></span>
-          <span><b>পাস নম্বর:</b> <span id="p_pass"></span></span>
+          <span id="p_passWrap"><b>পাস নম্বর:</b> <span id="p_pass"></span></span>
         </div>
-
         <div class="table-scroll">
           <table class="marks">
-            <thead>
-              <tr>
-                <th class="col-sl">ক্রমিক</th>
-                <th class="col-roll">রোল</th>
-                <th class="name">নাম</th>
-                <th class="col-mark">উপস্থিতি<br><small id="h_att"></small></th>
-                <th class="col-mark">ব্যবহারিক<br><small id="h_prac"></small></th>
-                <th class="col-mark">ভাইভা<br><small id="h_viva"></small></th>
-                <th class="col-total">মোট<br><small id="h_total"></small></th>
-                <th class="col-res">ফলাফল</th>
-                <th class="col-grade">গ্রেড</th>
-                <th class="col-act no-print">✕</th>
-              </tr>
-            </thead>
+            <thead id="thead"></thead>
             <tbody id="tbody"></tbody>
           </table>
         </div>
-
         <div class="summary-strip">
           <div class="pill">মোট পরীক্ষার্থী: <b id="s_total">০</b></div>
           <div class="pill">উপস্থিত: <b id="s_present">০</b></div>
-          <div class="pill">কৃতকার্য: <b id="s_pass">০</b></div>
-          <div class="pill">অকৃতকার্য: <b id="s_fail">০</b></div>
+          <div class="pill" id="pill_pass">কৃতকার্য: <b id="s_pass">০</b></div>
+          <div class="pill" id="pill_fail">অকৃতকার্য: <b id="s_fail">০</b></div>
           <div class="pill">অনুপস্থিত: <b id="s_absent">০</b></div>
         </div>
-
         <div class="sheet-foot">
           <div class="sign"><div class="line"></div><span id="p_teacher"></span><br><span id="p_designation"></span></div>
-          <div class="sign"><div class="line"></div>প্রধান শিক্ষকের স্বাক্ষর</div>
         </div>
       </div>
     </div>
-
     <div class="toolbar no-print" style="margin-top:16px;justify-content:flex-end">
       <button class="btn btn-print" id="printBtn">🖨 PDF / প্রিন্ট করুন (A4)</button>
     </div>
@@ -309,357 +259,371 @@ table.marks td input.invalid{border-color:var(--fail);background:#fdecea}
 
 <script>
 "use strict";
+const $=id=>document.getElementById(id);
+const bn='০১২৩৪৫৬৭৮৯';
+const toBn=v=>(v===null||v===undefined||v==='')?'':String(v).replace(/[0-9]/g,d=>bn[d]);
+const STORE_KEY='mzs_marks_v3';
 
-/* ---------------- helpers ---------------- */
-const $ = id => document.getElementById(id);
-const bnDigits = '০১২৩৪৫৬৭৮৯';
-const toBn = v => (v===null||v===undefined||v==='') ? '' : String(v).replace(/[0-9]/g, d=>bnDigits[d]);
-const STORE_KEY = 'mzs_practical_marks_v1';
+const PRESETS={
+  charu:{ subject:'চারুকলা', showResult:false, pass:18,
+          components:[{name:'ধারাবাহিক মূল্যায়ন',max:50}] },
+  ict:{ subject:'তথ্য ও যোগাযোগ প্রযুক্তি', showResult:true, pass:9,
+        components:[{name:'উপস্থিতি',max:5,type:'attendance',days:9},
+                    {name:'ব্যবহারিক পরীক্ষা',max:10},
+                    {name:'ভাইভা',max:10}] } };
 
-function defaultConfig(){
+function cloneComps(arr){ return arr.map(c=>({...c})); }
+function baseConfig(){
   return {
-    school:'ময়মনসিংহ জিলা স্কুল',
-    addr:'ময়মনসিংহ',
-    exam:'ব্যবহারিক/ধারাবাহিক মূল্যায়ন নম্বরপত্র',
-    subject:'চারুকলা',
-    klass:'সপ্তম',
-    section:'ক',
-    year:'২০২৬',
-    teacher:'মোঃ সারোয়ার আলম জিয়া',
-    designation:'সহকারী শিক্ষক',
-    maxAtt:5, maxPrac:10, maxViva:10, pass:9
+    school:'ময়মনসিংহ জিলা স্কুল', addr:'ময়মনসিংহ',
+    exam:'ধারাবাহিক মূল্যায়ন নম্বরপত্র',
+    subject:'চারুকলা', klass:'সপ্তম', section:'ক', year:'২০২৬',
+    teacher:'মোঃ সারোয়ার আলম জিয়া', designation:'সহকারী শিক্ষক',
+    showResult:false, pass:18, components:cloneComps(PRESETS.charu.components)
   };
 }
-function newStudent(roll){
-  return {roll: roll??'', name:'', att:'', prac:'', viva:'', absent:false};
-}
-function sheetLabel(cfg){
-  return `${cfg.subject} · ${cfg.klass} · ${cfg.section} · ${cfg.year}`;
-}
+function newStudent(roll){ return {roll:roll??'',marks:[],absent:false}; }
+function sheetLabel(c){ return `${c.subject} · ${c.klass} · ${c.section} · ${c.year}`; }
 function uid(){ return 's'+Date.now().toString(36)+Math.random().toString(36).slice(2,6); }
+function fullMarks(c){ return c.components.reduce((s,x)=>s+(+x.max||0),0); }
+function isAtt(comp){ return comp.type==='attendance'; }
 
-/* ---------------- state ---------------- */
-let store = { sheets:{}, currentId:null };
+/* উপস্থিতির লজিক: মোট দিনের মধ্যে যত দিন উপস্থিত, সে অনুপাতে নম্বর।
+   সব দিন উপস্থিত → পূর্ণ নম্বর; একদিনও না → ০; অন্তত ১ দিন থাকলে কমপক্ষে ১। */
+function attMark(days,comp){
+  const td=+comp.days||9, mx=+comp.max||5;
+  let d=+days; if(isNaN(d)||d<=0) return 0; if(d>td)d=td;
+  return Math.max(1,Math.round(d/td*mx));
+}
+function compValue(comp,raw){ return isAtt(comp)?attMark(raw,comp):(+raw||0); }
 
+let store={sheets:{},currentId:null};
 function load(){
-  try{
-    const raw = localStorage.getItem(STORE_KEY);
-    if(raw){ store = JSON.parse(raw); }
-  }catch(e){ console.warn('load failed', e); }
-  if(!store.sheets || Object.keys(store.sheets).length===0){
-    const id = uid();
-    store = { sheets:{ [id]:{ id, config:defaultConfig(), students:[] } }, currentId:id };
-    save();
+  try{ const r=localStorage.getItem(STORE_KEY); if(r) store=JSON.parse(r); }catch(e){}
+  if(!store.sheets||!Object.keys(store.sheets).length){
+    const id=uid(); store={sheets:{[id]:{id,config:baseConfig(),students:[]}},currentId:id}; save();
   }
-  if(!store.currentId || !store.sheets[store.currentId]){
-    store.currentId = Object.keys(store.sheets)[0];
-  }
+  if(!store.currentId||!store.sheets[store.currentId]) store.currentId=Object.keys(store.sheets)[0];
+  Object.values(store.sheets).forEach(s=>s.students.forEach(st=>syncMarks(st,s.config)));
 }
 let saveTimer=null;
-function save(){ localStorage.setItem(STORE_KEY, JSON.stringify(store)); }
+function save(){ localStorage.setItem(STORE_KEY,JSON.stringify(store)); }
 function saveDebounced(){
-  clearTimeout(saveTimer);
-  const badge=$('autoSaveBadge');
-  badge.textContent='… সংরক্ষণ হচ্ছে';
-  saveTimer=setTimeout(()=>{ save(); badge.textContent='✓ স্বয়ংক্রিয়ভাবে সংরক্ষিত'; },350);
+  clearTimeout(saveTimer); const b=$('autoSaveBadge'); b.textContent='… সংরক্ষণ হচ্ছে';
+  saveTimer=setTimeout(()=>{save();b.textContent='✓ স্বয়ংক্রিয়ভাবে সংরক্ষিত';},350);
 }
 function cur(){ return store.sheets[store.currentId]; }
-
-/* ---------------- grade ---------------- */
-function gradeOf(total, full, pass){
-  if(total < pass) return 'F';
-  const pct = full>0 ? (total/full)*100 : 0;
-  if(pct>=80) return 'A+';
-  if(pct>=70) return 'A';
-  if(pct>=60) return 'A-';
-  if(pct>=50) return 'B';
-  if(pct>=40) return 'C';
-  return 'D';
+function syncMarks(st,cfg){
+  const n=cfg.components.length;
+  if(!Array.isArray(st.marks)) st.marks=[];
+  while(st.marks.length<n) st.marks.push('');
+  if(st.marks.length>n) st.marks.length=n;
 }
-function fullMarks(cfg){ return (+cfg.maxAtt||0)+(+cfg.maxPrac||0)+(+cfg.maxViva||0); }
 
-/* ---------------- sheet selector ---------------- */
+function gradeOf(total,full,pass){
+  if(total<pass) return 'F';
+  const p=full>0?total/full*100:0;
+  if(p>=80)return 'A+'; if(p>=70)return 'A'; if(p>=60)return 'A-';
+  if(p>=50)return 'B'; if(p>=40)return 'C'; return 'D';
+}
+
 function renderSheetSelect(){
   const sel=$('sheetSelect'); sel.innerHTML='';
   Object.values(store.sheets).forEach(s=>{
-    const o=document.createElement('option');
-    o.value=s.id; o.textContent=sheetLabel(s.config);
-    if(s.id===store.currentId) o.selected=true;
-    sel.appendChild(o);
+    const o=document.createElement('option'); o.value=s.id; o.textContent=sheetLabel(s.config);
+    if(s.id===store.currentId)o.selected=true; sel.appendChild(o);
   });
 }
 
-/* ---------------- config UI ---------------- */
-const cfgMap = {
-  cfg_school:'school', cfg_addr:'addr', cfg_exam:'exam', cfg_subject:'subject',
-  cfg_class:'klass', cfg_section:'section', cfg_year:'year',
-  cfg_teacher:'teacher', cfg_designation:'designation',
-  cfg_maxAtt:'maxAtt', cfg_maxPrac:'maxPrac', cfg_maxViva:'maxViva', cfg_pass:'pass'
-};
+const cfgMap={cfg_school:'school',cfg_addr:'addr',cfg_exam:'exam',cfg_subject:'subject',
+  cfg_class:'klass',cfg_section:'section',cfg_year:'year',cfg_teacher:'teacher',cfg_designation:'designation'};
 function fillConfig(){
-  const cfg=cur().config;
-  for(const [id,key] of Object.entries(cfgMap)) $(id).value = cfg[key];
+  const c=cur().config;
+  for(const [id,k] of Object.entries(cfgMap)) $(id).value=c[k];
+  $('cfg_pass').value=c.pass;
 }
 function bindConfig(){
-  for(const [id,key] of Object.entries(cfgMap)){
-    $(id).addEventListener('input', e=>{
-      let v=e.target.value;
-      if(['maxAtt','maxPrac','maxViva','pass'].includes(key)) v = v===''?0:Math.max(0,+v);
-      cur().config[key]=v;
-      renderPrintHeader(); renderSheetSelect(); recalcAll(); saveDebounced();
-    });
+  for(const [id,k] of Object.entries(cfgMap)){
+    if(id==='cfg_subject') continue;
+    $(id).addEventListener('input',e=>{ cur().config[k]=e.target.value; renderPrintHeader(); renderSheetSelect(); saveDebounced(); });
   }
+  $('cfg_subject').addEventListener('change',e=>{
+    const v=e.target.value; cur().config.subject=v;
+    const key = v==='চারুকলা'?'charu' : (v==='তথ্য ও যোগাযোগ প্রযুক্তি'?'ict':null);
+    if(key && !rowHasEntry2()) applyPreset(key);
+    else { renderPrintHeader(); renderSheetSelect(); saveDebounced(); }
+  });
+  $('cfg_pass').addEventListener('input',e=>{ cur().config.pass=e.target.value===''?0:Math.max(0,+e.target.value); renderPrintHeader(); recalcAll(); saveDebounced(); });
 }
 
-/* ---------------- print header ---------------- */
+/* কম্পোনেন্ট এডিটর */
+function renderComponents(){
+  const box=$('compEditor'); box.innerHTML='';
+  cur().config.components.forEach((comp,i)=>{
+    const row=document.createElement('div'); row.className='comp-row';
+
+    const f1=document.createElement('div'); f1.className='field';
+    f1.innerHTML='<label>কম্পোনেন্ট '+toBn(i+1)+'</label>';
+    const nIn=document.createElement('input'); nIn.value=comp.name; nIn.placeholder='যেমন: ব্যবহারিক';
+    nIn.addEventListener('input',()=>{ comp.name=nIn.value; renderTableHeader(); saveDebounced(); });
+    f1.appendChild(nIn);
+
+    const f2=document.createElement('div'); f2.className='field small';
+    f2.innerHTML='<label>ধরন</label>';
+    const tSel=document.createElement('select');
+    tSel.innerHTML='<option value="marks">সাধারণ নম্বর</option><option value="attendance">উপস্থিতি (দিন→নম্বর)</option>';
+    tSel.value=isAtt(comp)?'attendance':'marks';
+    tSel.addEventListener('change',()=>{
+      if(tSel.value==='attendance'){ comp.type='attendance'; if(!comp.days)comp.days=9; }
+      else { delete comp.type; delete comp.days; }
+      cur().students.forEach(st=>st.marks[i]='');
+      renderComponents(); renderPrintHeader(); buildTable(); save();
+    });
+    f2.appendChild(tSel);
+
+    const f3=document.createElement('div'); f3.className='field small';
+    f3.innerHTML='<label>পূর্ণমান</label>';
+    const mIn=document.createElement('input'); mIn.type='number'; mIn.min='0'; mIn.value=comp.max;
+    mIn.addEventListener('input',()=>{ comp.max=mIn.value===''?0:Math.max(0,+mIn.value); renderPrintHeader(); renderTableHeader(); recalcAll(); saveDebounced(); });
+    f3.appendChild(mIn);
+
+    row.appendChild(f1); row.appendChild(f2); row.appendChild(f3);
+
+    if(isAtt(comp)){
+      const f4=document.createElement('div'); f4.className='field small';
+      f4.innerHTML='<label>মোট দিন</label>';
+      const dIn=document.createElement('input'); dIn.type='number'; dIn.min='1'; dIn.value=comp.days||9;
+      dIn.addEventListener('input',()=>{ comp.days=dIn.value===''?9:Math.max(1,+dIn.value); renderTableHeader(); buildTable(); saveDebounced(); });
+      f4.appendChild(dIn); row.appendChild(f4);
+    }
+
+    const del=document.createElement('button'); del.className='btn btn-danger btn-sm'; del.textContent='✕ মুছুন';
+    del.addEventListener('click',()=>{
+      if(cur().config.components.length<=1){ alert('অন্তত একটি কম্পোনেন্ট থাকতে হবে।'); return; }
+      cur().config.components.splice(i,1);
+      cur().students.forEach(st=>st.marks.splice(i,1));
+      renderComponents(); renderPrintHeader(); buildTable(); save();
+    });
+    row.appendChild(del);
+    box.appendChild(row);
+  });
+}
+function applyPreset(key){
+  const p=PRESETS[key], c=cur().config;
+  c.subject=p.subject; c.components=cloneComps(p.components); c.pass=p.pass; c.showResult=p.showResult;
+  cur().students.forEach(st=>{ st.marks=[]; syncMarks(st,c); });
+  fillConfig(); renderComponents(); renderPrintHeader(); renderSheetSelect(); buildTable(); save();
+}
+
 function renderPrintHeader(){
   const c=cur().config, full=fullMarks(c);
-  $('p_school').textContent=c.school;
-  $('p_addr').textContent=c.addr;
+  $('p_school').textContent=c.school; $('p_addr').textContent=c.addr;
   $('p_exam').textContent=`${c.exam} — ${c.year}`;
-  $('p_subject').textContent=c.subject;
-  $('p_class').textContent=c.klass;
-  $('p_section').textContent=c.section;
-  $('p_full').textContent=toBn(full);
-  $('p_pass').textContent=toBn(c.pass);
-  $('p_teacher').textContent=c.teacher;
-  $('p_designation').textContent=c.designation;
-  $('h_att').textContent='('+toBn(c.maxAtt)+')';
-  $('h_prac').textContent='('+toBn(c.maxPrac)+')';
-  $('h_viva').textContent='('+toBn(c.maxViva)+')';
-  $('h_total').textContent='('+toBn(full)+')';
-  $('totalHint').textContent=`বর্তমান পূর্ণমান: ${toBn(full)}, পাস নম্বর: ${toBn(c.pass)}`;
+  $('p_subject').textContent=c.subject; $('p_class').textContent=c.klass; $('p_section').textContent=c.section;
+  $('p_full').textContent=toBn(full); $('p_pass').textContent=toBn(c.pass);
+  $('p_teacher').textContent=c.teacher; $('p_designation').textContent=c.designation;
+  $('p_passWrap').style.display=c.showResult?'':'none';
+  $('pill_pass').style.display=c.showResult?'':'none';
+  $('pill_fail').style.display=c.showResult?'':'none';
+  $('totalHint').textContent=`বর্তমান পূর্ণমান: ${toBn(full)}`+(c.showResult?` · পাস নম্বর: ${toBn(c.pass)}`:` · (এই শীটে ফলাফল/গ্রেড দেখানো হবে না)`);
 }
 
-/* ---------------- table ---------------- */
+function renderTableHeader(){
+  const c=cur().config, full=fullMarks(c);
+  const thead=$('thead'); thead.innerHTML='';
+  const tr=document.createElement('tr');
+  const add=(html,cls)=>{ const th=document.createElement('th'); if(cls)th.className=cls; th.innerHTML=html; tr.appendChild(th); };
+  add('রোল','col-roll');
+  c.components.forEach(comp=>{
+    const sub = isAtt(comp) ? `${toBn(comp.days||9)} দিনে ${toBn(comp.max)}` : `${toBn(comp.max)}`;
+    add(`${comp.name||'নম্বর'}<br><small>(${sub})</small>`,'col-mark');
+  });
+  add(`মোট<br><small>(${toBn(full)})</small>`,'col-total');
+  if(c.showResult){ add('ফলাফল','col-res'); add('গ্রেড','col-grade'); }
+  add('✕','col-act no-print');
+  thead.appendChild(tr);
+}
+
 function buildTable(){
-  const tbody=$('tbody'); tbody.innerHTML='';
-  cur().students.forEach((st,i)=> tbody.appendChild(makeRow(st,i)));
+  cur().students.forEach(st=>syncMarks(st,cur().config));
+  renderTableHeader();
+  const tb=$('tbody'); tb.innerHTML='';
+  cur().students.forEach(st=>tb.appendChild(makeRow(st)));
   recalcAll();
 }
-function markCell(st,key,max){
-  const td=document.createElement('td'); td.className='col-mark';
-  const inp=document.createElement('input');
-  inp.type='number'; inp.min='0'; inp.max=max; inp.value=st[key]; inp.placeholder='০';
-  const span=document.createElement('span'); span.className='print-val';
-  inp.addEventListener('input',()=>{
-    let v=inp.value;
-    if(v===''){ st[key]=''; inp.classList.remove('invalid'); }
-    else{
-      let n=+v;
-      if(n>max){ inp.classList.add('invalid'); }
-      else inp.classList.remove('invalid');
-      n=Math.max(0,Math.min(max,n));
-      st[key]=v===''?'':n;
-      if(+inp.value>max) inp.value=n;
-    }
-    recalcRow(td.parentElement,st); updateRowSpans(td.parentElement,st); saveDebounced();
-  });
-  td.appendChild(inp); td.appendChild(span);
-  return {td,inp,span};
-}
-function makeRow(st,i){
+function makeRow(st){
   const c=cur().config;
   const tr=document.createElement('tr');
 
-  const tdSl=document.createElement('td'); tdSl.className='col-sl'; tdSl.dataset.role='sl';
-  tr.appendChild(tdSl);
-
-  // roll
   const tdRoll=document.createElement('td'); tdRoll.className='col-roll';
-  const rollInp=document.createElement('input'); rollInp.type='number'; rollInp.min='1'; rollInp.value=st.roll;
-  const rollSpan=document.createElement('span'); rollSpan.className='print-val';
-  rollInp.addEventListener('input',()=>{ st.roll=rollInp.value; updateRowSpans(tr,st); saveDebounced(); });
-  tdRoll.appendChild(rollInp); tdRoll.appendChild(rollSpan); tr.appendChild(tdRoll);
+  const rIn=document.createElement('input'); rIn.type='number'; rIn.min='1'; rIn.value=st.roll;
+  const rSp=document.createElement('span'); rSp.className='print-val';
+  rIn.addEventListener('input',()=>{ st.roll=rIn.value; rSp.textContent=toBn(st.roll); saveDebounced(); });
+  rSp.textContent=toBn(st.roll); tdRoll.appendChild(rIn); tdRoll.appendChild(rSp); tr.appendChild(tdRoll);
 
-  // name
-  const tdName=document.createElement('td'); tdName.className='name';
-  const nameInp=document.createElement('input'); nameInp.type='text'; nameInp.value=st.name; nameInp.placeholder='(ঐচ্ছিক)';
-  const nameSpan=document.createElement('span'); nameSpan.className='print-val'; nameSpan.style.textAlign='right';
-  nameInp.addEventListener('input',()=>{ st.name=nameInp.value; nameSpan.textContent=st.name; saveDebounced(); });
-  tdName.appendChild(nameInp); tdName.appendChild(nameSpan); tr.appendChild(tdName);
+  const markInputs=[];
+  c.components.forEach((comp,i)=>{
+    const td=document.createElement('td'); td.className='col-mark';
+    const inp=document.createElement('input'); inp.type='number'; inp.min='0';
+    inp.max=isAtt(comp)?(comp.days||9):comp.max;
+    inp.value=st.marks[i]??''; inp.placeholder=isAtt(comp)?'দিন':'০';
+    const sp=document.createElement('span'); sp.className='print-val';
 
-  const att=markCell(st,'att',+c.maxAtt);  tr.appendChild(att.td);
-  const prac=markCell(st,'prac',+c.maxPrac); tr.appendChild(prac.td);
-  const viva=markCell(st,'viva',+c.maxViva); tr.appendChild(viva.td);
+    const printText=()=>{ // রিপোর্টে দেখাবে প্রকৃত নম্বর
+      if(st.absent) return 'অ';
+      if(st.marks[i]==='') return '-';
+      return toBn(compValue(comp,st.marks[i]));
+    };
 
-  const tdTotal=document.createElement('td'); tdTotal.className='col-total'; tdTotal.dataset.role='total'; tr.appendChild(tdTotal);
-  const tdRes=document.createElement('td'); tdRes.className='col-res'; tdRes.dataset.role='res'; tr.appendChild(tdRes);
-  const tdGrade=document.createElement('td'); tdGrade.className='col-grade grade-cell'; tdGrade.dataset.role='grade'; tr.appendChild(tdGrade);
+    let markBadge=null;
+    if(isAtt(comp)){
+      const wrap=document.createElement('div'); wrap.className='att-cell';
+      markBadge=document.createElement('span'); markBadge.className='att-mark';
+      const setBadge=()=>{ markBadge.textContent='নম্বর: '+(st.marks[i]===''?'০':toBn(compValue(comp,st.marks[i]))); };
+      inp.addEventListener('input',()=>{
+        let v=inp.value; const mx=+inp.max;
+        if(v===''){ st.marks[i]=''; }
+        else{ let n=Math.round(+v); if(n>mx){inp.value=mx;n=mx;} if(n<0){inp.value=0;n=0;} st.marks[i]=n; }
+        setBadge(); sp.textContent=printText(); recalcRow(tr,st); renderSummary(); saveDebounced();
+      });
+      setBadge();
+      wrap.appendChild(inp); wrap.appendChild(markBadge); td.appendChild(wrap);
+    } else {
+      inp.addEventListener('input',()=>{
+        let v=inp.value; const mx=+comp.max;
+        if(v===''){ st.marks[i]=''; }
+        else{ let n=+v; if(n>mx){inp.value=mx;n=mx;} if(n<0){inp.value=0;n=0;} st.marks[i]=n; }
+        sp.textContent=printText(); recalcRow(tr,st); renderSummary(); saveDebounced();
+      });
+      td.appendChild(inp);
+    }
+    sp.textContent=printText();
+    if(st.absent){ inp.disabled=true; inp.style.opacity=.4; }
+    td.appendChild(sp); tr.appendChild(td);
+    markInputs.push({inp,sp,comp,badge:markBadge,i});
+  });
 
-  // action: absent toggle + delete
-  const tdAct=document.createElement('td'); tdAct.className='col-act no-print';
-  const wrap=document.createElement('div'); wrap.style.display='flex'; wrap.style.flexDirection='column'; wrap.style.gap='4px'; wrap.style.alignItems='center';
-  const chkLabel=document.createElement('label'); chkLabel.title='অনুপস্থিত'; chkLabel.style.fontSize='.65rem'; chkLabel.style.color='var(--muted)';
+  const tdT=document.createElement('td'); tdT.className='col-total'; tdT.dataset.role='total'; tr.appendChild(tdT);
+  if(c.showResult){
+    const tdR=document.createElement('td'); tdR.className='col-res'; tdR.dataset.role='res'; tr.appendChild(tdR);
+    const tdG=document.createElement('td'); tdG.className='col-grade grade-cell'; tdG.dataset.role='grade'; tr.appendChild(tdG);
+  }
+
+  const tdA=document.createElement('td'); tdA.className='col-act no-print';
+  const wrap=document.createElement('div'); wrap.style.cssText='display:flex;flex-direction:column;gap:4px;align-items:center';
+  const lab=document.createElement('label'); lab.title='অনুপস্থিত'; lab.style.cssText='font-size:.62rem;color:var(--muted);display:flex;align-items:center;gap:3px';
   const chk=document.createElement('input'); chk.type='checkbox'; chk.className='absent-chk'; chk.checked=st.absent;
   chk.addEventListener('change',()=>{
     st.absent=chk.checked;
-    [att.inp,prac.inp,viva.inp].forEach(x=>{ x.disabled=chk.checked; x.style.opacity=chk.checked?.4:1; });
-    recalcRow(tr,st); updateRowSpans(tr,st); saveDebounced();
+    markInputs.forEach(m=>{
+      m.inp.disabled=chk.checked; m.inp.style.opacity=chk.checked?.4:1;
+      m.sp.textContent = st.absent?'অ':(st.marks[m.i]===''?'-':toBn(compValue(m.comp,st.marks[m.i])));
+    });
+    recalcRow(tr,st); renderSummary(); saveDebounced();
   });
-  chkLabel.appendChild(chk); chkLabel.appendChild(document.createTextNode('অনুপ.'));
+  lab.appendChild(chk); lab.appendChild(document.createTextNode('অনুপ.'));
   const del=document.createElement('button'); del.className='row-del'; del.textContent='✕'; del.title='সারি মুছুন';
-  del.addEventListener('click',()=>{
-    const idx=cur().students.indexOf(st);
-    if(idx>-1) cur().students.splice(idx,1);
-    buildTable(); save();
-  });
-  wrap.appendChild(chkLabel); wrap.appendChild(del); tdAct.appendChild(wrap); tr.appendChild(tdAct);
+  del.addEventListener('click',()=>{ const idx=cur().students.indexOf(st); if(idx>-1)cur().students.splice(idx,1); buildTable(); save(); });
+  wrap.appendChild(lab); wrap.appendChild(del); tdA.appendChild(wrap); tr.appendChild(tdA);
 
-  // initial disabled state
-  if(st.absent)[att.inp,prac.inp,viva.inp].forEach(x=>{x.disabled=true;x.style.opacity=.4;});
-
-  updateRowSpans(tr,st);
+  recalcRow(tr,st);
   return tr;
 }
 
 function rowTotal(st){
-  return (+st.att||0)+(+st.prac||0)+(+st.viva||0);
+  const comps=cur().config.components;
+  return comps.reduce((s,comp,i)=>s+compValue(comp,st.marks[i]),0);
 }
-function rowHasEntry(st){
-  return st.att!=='' || st.prac!=='' || st.viva!=='';
-}
+function rowHasEntry(st){ return st.marks.some(v=>v!==''&&v!==undefined&&v!==null); }
 function recalcRow(tr,st){
   const c=cur().config, full=fullMarks(c), pass=+c.pass;
-  const tdTotal=tr.querySelector('[data-role=total]');
-  const tdRes=tr.querySelector('[data-role=res]');
-  const tdGrade=tr.querySelector('[data-role=grade]');
+  const tT=tr.querySelector('[data-role=total]');
+  const tR=tr.querySelector('[data-role=res]'), tG=tr.querySelector('[data-role=grade]');
   if(st.absent){
-    tdTotal.textContent='—';
-    tdRes.innerHTML='<span class="res-badge res-absent">অনুপস্থিত</span>';
-    tdGrade.textContent='—';
+    tT.textContent='—';
+    if(tR){ tR.innerHTML='<span class="res-badge res-absent">অনুপস্থিত</span>'; tG.textContent='—'; }
     return;
   }
-  if(!rowHasEntry(st)){
-    tdTotal.textContent='—'; tdRes.textContent='—'; tdGrade.textContent='—'; return;
-  }
+  if(!rowHasEntry(st)){ tT.textContent='—'; if(tR){tR.textContent='—';tG.textContent='—';} return; }
   const total=rowTotal(st);
-  tdTotal.textContent=toBn(total);
-  const passed = total>=pass;
-  tdRes.innerHTML = passed
-    ? '<span class="res-badge res-pass">কৃতকার্য</span>'
-    : '<span class="res-badge res-fail">অকৃতকার্য</span>';
-  tdGrade.textContent=gradeOf(total,full,pass);
-}
-function updateRowSpans(tr,st){
-  const c=cur().config;
-  // roll & name spans
-  const rollSpan=tr.children[1].querySelector('.print-val'); rollSpan.textContent=toBn(st.roll);
-  const nameSpan=tr.children[2].querySelector('.print-val'); nameSpan.textContent=st.name||'';
-  const markTds=[tr.children[3],tr.children[4],tr.children[5]];
-  const keys=['att','prac','viva'];
-  markTds.forEach((td,i)=>{
-    const span=td.querySelector('.print-val');
-    if(st.absent) span.textContent='অ';
-    else span.textContent = st[keys[i]]===''?'-':toBn(st[keys[i]]);
-  });
+  tT.textContent=toBn(total);
+  if(tR){
+    tR.innerHTML = total>=pass ? '<span class="res-badge res-pass">কৃতকার্য</span>' : '<span class="res-badge res-fail">অকৃতকার্য</span>';
+    tG.textContent=gradeOf(total,full,pass);
+  }
 }
 function recalcAll(){
-  const tbody=$('tbody');
-  Array.from(tbody.children).forEach((tr,i)=>{
-    const st=cur().students[i];
-    tr.querySelector('[data-role=sl]')?.replaceChildren(document.createTextNode(toBn(i+1)));
-    if(st){ recalcRow(tr,st); updateRowSpans(tr,st); }
-  });
+  const tb=$('tbody');
+  Array.from(tb.children).forEach((tr,i)=>{ const st=cur().students[i]; if(st) recalcRow(tr,st); });
   renderSummary();
 }
 function renderSummary(){
-  const c=cur().config, pass=+c.pass, students=cur().students;
+  const c=cur().config, pass=+c.pass, sts=cur().students;
   let present=0,passed=0,failed=0,absent=0;
-  students.forEach(st=>{
-    if(st.absent){ absent++; return; }
-    if(!rowHasEntry(st)) return;
-    present++;
-    if(rowTotal(st)>=pass) passed++; else failed++;
-  });
-  $('s_total').textContent=toBn(students.length);
-  $('s_present').textContent=toBn(present);
-  $('s_pass').textContent=toBn(passed);
-  $('s_fail').textContent=toBn(failed);
-  $('s_absent').textContent=toBn(absent);
+  sts.forEach(st=>{ if(st.absent){absent++;return;} if(!rowHasEntry(st))return; present++; rowTotal(st)>=pass?passed++:failed++; });
+  $('s_total').textContent=toBn(sts.length); $('s_present').textContent=toBn(present);
+  $('s_pass').textContent=toBn(passed); $('s_fail').textContent=toBn(failed); $('s_absent').textContent=toBn(absent);
 }
 
-/* ---------------- roll generation ---------------- */
 function generateRolls(){
   const from=parseInt($('rollFrom').value,10), to=parseInt($('rollTo').value,10);
   if(isNaN(from)||isNaN(to)||from<1||to<from){ alert('সঠিক রোল রেঞ্জ দিন (শুরু ≤ শেষ)।'); return; }
   if(to-from>500){ alert('রেঞ্জ অনেক বড়। ৫০০-এর কম রাখুন।'); return; }
-  const existing=new Set(cur().students.map(s=>String(s.roll)));
-  for(let r=from;r<=to;r++){
-    if(!existing.has(String(r))) cur().students.push(newStudent(r));
-  }
+  const have=new Set(cur().students.map(s=>String(s.roll)));
+  for(let r=from;r<=to;r++) if(!have.has(String(r))){ const st=newStudent(r); syncMarks(st,cur().config); cur().students.push(st); }
   cur().students.sort((a,b)=>(+a.roll||0)-(+b.roll||0));
   buildTable(); save();
 }
 
-/* ---------------- sheet ops ---------------- */
 function switchSheet(id){ store.currentId=id; save(); renderAll(); }
 function newSheet(){
-  const id=uid();
-  const base=cur()?cur().config:defaultConfig();
-  const cfg=Object.assign({}, base, {subject:base.subject, klass:base.klass, section:base.section});
-  store.sheets[id]={ id, config:Object.assign(defaultConfig(),{teacher:base.teacher,designation:base.designation,school:base.school,addr:base.addr,year:base.year,exam:base.exam}), students:[] };
-  store.currentId=id; save(); renderAll();
+  const id=uid(); const b=cur().config; const cfg=baseConfig();
+  Object.assign(cfg,{school:b.school,addr:b.addr,year:b.year,exam:b.exam,teacher:b.teacher,designation:b.designation});
+  store.sheets[id]={id,config:cfg,students:[]}; store.currentId=id; save(); renderAll();
 }
 function deleteSheet(){
   if(Object.keys(store.sheets).length<=1){ alert('অন্তত একটি শীট থাকতে হবে।'); return; }
   if(!confirm('এই শীট ও এর সব ডেটা মুছে ফেলবেন?')) return;
-  delete store.sheets[store.currentId];
-  store.currentId=Object.keys(store.sheets)[0];
-  save(); renderAll();
+  delete store.sheets[store.currentId]; store.currentId=Object.keys(store.sheets)[0]; save(); renderAll();
 }
 
-/* ---------------- backup / restore ---------------- */
 function backup(){
   const blob=new Blob([JSON.stringify(store,null,2)],{type:'application/json'});
-  const a=document.createElement('a');
-  a.href=URL.createObjectURL(blob);
-  a.download='নম্বরপত্র-ব্যাকআপ-'+new Date().toISOString().slice(0,10)+'.json';
-  a.click(); URL.revokeObjectURL(a.href);
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob);
+  a.download='নম্বরপত্র-ব্যাকআপ-'+new Date().toISOString().slice(0,10)+'.json'; a.click(); URL.revokeObjectURL(a.href);
 }
 function restore(file){
-  const reader=new FileReader();
-  reader.onload=()=>{
-    try{
-      const data=JSON.parse(reader.result);
-      if(!data.sheets) throw new Error('invalid');
-      if(!confirm('রিস্টোর করলে বর্তমান সব ডেটা প্রতিস্থাপিত হবে। চালিয়ে যাবেন?')) return;
-      store=data;
-      if(!store.currentId||!store.sheets[store.currentId]) store.currentId=Object.keys(store.sheets)[0];
-      save(); renderAll();
-      alert('সফলভাবে রিস্টোর হয়েছে।');
-    }catch(e){ alert('ফাইলটি বৈধ ব্যাকআপ নয়।'); }
-  };
-  reader.readAsText(file);
+  const rd=new FileReader();
+  rd.onload=()=>{ try{
+    const d=JSON.parse(rd.result); if(!d.sheets) throw 0;
+    if(!confirm('রিস্টোর করলে বর্তমান সব ডেটা প্রতিস্থাপিত হবে। চালিয়ে যাবেন?')) return;
+    store=d; if(!store.currentId||!store.sheets[store.currentId]) store.currentId=Object.keys(store.sheets)[0];
+    Object.values(store.sheets).forEach(s=>s.students.forEach(st=>syncMarks(st,s.config)));
+    save(); renderAll(); alert('সফলভাবে রিস্টোর হয়েছে।');
+  }catch(e){ alert('ফাইলটি বৈধ ব্যাকআপ নয়।'); } };
+  rd.readAsText(file);
 }
 
-/* ---------------- render all ---------------- */
-function renderAll(){
-  renderSheetSelect();
-  fillConfig();
-  renderPrintHeader();
-  buildTable();
-}
+function renderAll(){ renderSheetSelect(); fillConfig(); renderComponents(); renderPrintHeader(); buildTable(); }
+function rowHasEntry2(){ return cur().students.some(rowHasEntry); }
 
-/* ---------------- events ---------------- */
 function bindEvents(){
   $('sheetSelect').addEventListener('change',e=>switchSheet(e.target.value));
   $('newSheetBtn').addEventListener('click',newSheet);
   $('delSheetBtn').addEventListener('click',deleteSheet);
+  $('presetCharu').addEventListener('click',()=>{ if(rowHasEntry2()&&!confirm('প্রিসেট প্রয়োগ করলে এই শীটের দেওয়া নম্বর মুছে যাবে। চালিয়ে যাবেন?'))return; applyPreset('charu'); });
+  $('presetIct').addEventListener('click',()=>{ if(rowHasEntry2()&&!confirm('প্রিসেট প্রয়োগ করলে এই শীটের দেওয়া নম্বর মুছে যাবে। চালিয়ে যাবেন?'))return; applyPreset('ict'); });
+  $('addCompBtn').addEventListener('click',()=>{ cur().config.components.push({name:'',max:0}); cur().students.forEach(st=>st.marks.push('')); renderComponents(); renderPrintHeader(); buildTable(); save(); });
   $('genRollBtn').addEventListener('click',generateRolls);
-  $('addRowBtn').addEventListener('click',()=>{ cur().students.push(newStudent('')); buildTable(); save(); });
+  $('addRowBtn').addEventListener('click',()=>{ const st=newStudent(''); syncMarks(st,cur().config); cur().students.push(st); buildTable(); save(); });
   $('clearRowsBtn').addEventListener('click',()=>{ if(confirm('এই শীটের সব সারি মুছবেন?')){ cur().students=[]; buildTable(); save(); }});
   $('printBtn').addEventListener('click',()=>window.print());
   $('backupBtn').addEventListener('click',backup);
   $('restoreBtn').addEventListener('click',()=>$('restoreFile').click());
-  $('restoreFile').addEventListener('change',e=>{ if(e.target.files[0]) restore(e.target.files[0]); e.target.value=''; });
+  $('restoreFile').addEventListener('change',e=>{ if(e.target.files[0])restore(e.target.files[0]); e.target.value=''; });
 }
 
-/* ---------------- init ---------------- */
-load();
-bindConfig();
-bindEvents();
-renderAll();
+load(); bindConfig(); bindEvents(); renderAll();
 </script>
 </body>
 </html>
