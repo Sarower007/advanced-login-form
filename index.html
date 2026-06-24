@@ -8,8 +8,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
+/* স্থানীয় সূর্য ফন্ট — public/surjo.woff2 ফাইলটি থাকলে ব্যবহার হবে, না থাকলে নিচের ফলব্যাক ফন্টে চলে যাবে */
+@font-face{
+  font-family:'Surjo';
+  src:url('public/surjo.woff2') format('woff2');
+  font-weight:normal;
+  font-style:normal;
+  font-display:swap;
+}
 :root{
-  --bn-font:'Hind Siliguri','Noto Sans Bengali','Nirmala UI','Vrinda',sans-serif;
+  --bn-font:'Surjo','Hind Siliguri','Noto Sans Bengali','Nirmala UI','Vrinda',sans-serif;
   --primary:#0f5132;--primary-2:#157347;--accent:#198754;
   --bg:#eef2f0;--card:#fff;--line:#d7dedb;--muted:#5f6b66;
   --pass:#0f7b3f;--fail:#c0392b;--shadow:0 6px 22px rgba(15,81,50,.10);
@@ -607,7 +615,27 @@ function restore(file){
 function renderAll(){ renderSheetSelect(); fillConfig(); renderComponents(); renderPrintHeader(); buildTable(); }
 function rowHasEntry2(){ return cur().students.some(rowHasEntry); }
 
+// Enter চাপলে একই কলামে নিচের ঘরে (Shift+Enter দিলে উপরের ঘরে) ফোকাস যাবে
+function bindGridNav(){
+  $('tbody').addEventListener('keydown',e=>{
+    if(e.key!=='Enter') return;
+    const inp=e.target;
+    if(!inp||inp.tagName!=='INPUT'||inp.type==='checkbox') return;
+    e.preventDefault();
+    const td=inp.closest('td'); if(!td) return;
+    const colIdx=td.cellIndex, dir=e.shiftKey?-1:1;
+    let row=dir>0?td.closest('tr').nextElementSibling:td.closest('tr').previousElementSibling;
+    while(row){
+      const cell=row.cells[colIdx];
+      const next=cell&&cell.querySelector('input:not([disabled])');
+      if(next){ next.focus(); if(next.select)next.select(); return; }
+      row=dir>0?row.nextElementSibling:row.previousElementSibling;
+    }
+  });
+}
+
 function bindEvents(){
+  bindGridNav();
   $('sheetSelect').addEventListener('change',e=>switchSheet(e.target.value));
   $('newSheetBtn').addEventListener('click',newSheet);
   $('delSheetBtn').addEventListener('click',deleteSheet);
